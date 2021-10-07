@@ -4,8 +4,8 @@ from django.shortcuts import redirect, render
 from bank.models import CustomerHistory, Data
 
 # Create your views here.
-def home(request):
-    return render(request, 'home_page.html')
+def index(request):
+    return render(request, 'index.html')
 
 def customers(request):
     datas = Data.objects.all()
