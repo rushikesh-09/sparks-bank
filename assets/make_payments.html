@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bank</title>
+    <style>
+        .center{
+            margin-left:auto ;
+            margin-right: auto;
+        }
+        form{
+            text-align: center;
+        } 
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+      
+    </style>
+</head>
+<body >
+    <ul>
+        <li><a class="active" href="home_page.html">Home</a></li>
+        <li><a href="customers.html">Customers</a></li>
+        <li><a href="history.html">Transaction History</a></li>
+      </ul>
+
+    <h2 style="text-align: center;">Make Transaction</h3>
+        <br>
+    <div >
+        <form  action="">
+            <label for="sender">Sender's Name:</label><br>
+            <input type="text" id="sender" name="sender"><br>
+            <label for="sender's account">Sender's account no:</label><br>
+            <input type="text" id="sender's account" name="sender's account"><br><br>
+      
+            <label for="receiver">Receiver's Name:</label><br>
+            <input type="text" id="receiver" name="receiver"><br>
+            <label for="receiver's account">Receiver's account no:</label><br>
+            <input type="text" id="receiver's account" name="receiver's account"><br><br>
+        
+            <input type="submit" value="make transaction">
+        
+        </form> 
+    </div>
+   
+</body>
+</html>
