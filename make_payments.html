@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparks Bank</title>
+    <style>
+        .center{
+            margin-left:auto ;
+            margin-right: auto;
+        }
+        form{
+            text-align: center;
+        } 
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+      
+    </style>
+</head>
+<body >
+    <ul>
+        <li><a href="http://127.0.0.1:8000">Home</a></li>
+        <li><a href="customers">Customer's Data</a></li>
+        <li><a href="history">Transaction History</a></li>
+      </ul>
+
+    <h2 style="text-align: center;">Make Transaction</h3>
+    <br>
+
+    <div >
+        <form  action="history" method="post" autocomplete="off">
+            {% csrf_token %}
+            <label for="sender">Sender's Name:</label><br>
+            <input type="text" list="sender" name="sender" required><br>
+            <datalist id="sender">
+                <option value="Ketan">
+                <option value="Rohan">
+                <option value="Jaydip">
+                <option value="Bhushan">
+                <option value="Aman">
+                <option value="Satwik">
+                <option value="Keshav">
+                <option value="Mayur">
+                <option value="Vaibhav">
+                <option value="Rupam">
+            </datalist>
+            <br>
+            <label for="receiver">Receiver's Name:</label><br>
+            <input type="text" list="receiver" name="receiver" required><br>
+            <datalist id="receiver">
+                <option value="Ketan">
+                <option value="Rohan">
+                <option value="Jaydip">
+                <option value="Bhushan">
+                <option value="Aman">
+                <option value="Satwik">
+                <option value="Keshav">
+                <option value="Mayur">
+                <option value="Vaibhav">
+                <option value="Rupam">
+            </datalist>
+            <br>
+            <label for="amount">Amount:</label><br>
+            <input type="number" id="amount" name="amount" required><br><br>
+        
+            <input type="submit" onclick=" return greeting()" value="make transaction">
+        
+        </form> 
+        {% if messages %}
+        {% for message in messages %}
+         {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
+
+        {% endfor %}
+
+        {% endif %}
+    </div>
+
+
+</body>
+</html>
