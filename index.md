@@ -1,1 +1,83 @@
 
+{% load static%}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 70%;
+        }
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: center;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+    </style>
+    <title>Sparks Bank</title>
+</head>
+<body>
+
+    
+    <ul>
+        <li><a  href="http://127.0.0.1:8000">Home</a></li>
+        <li><a href="customers">Customer's Data</a></li>
+        <li><a href="payments">Make Transaction</a></li>
+      </ul>
+    <h2 style="text-align: center;">Transaction History</h2>
+
+<table class="center">
+  <tr>
+    <th style="width: 80px;">Sr No.</th>
+    <th style="width: 300px;">Sender</th>
+    <th style="width: 300px;">Receiver</th>
+    <th style="width: 100px">Amount</th>
+  </tr>
+  {% for hist in history_data %}
+  <tr>
+    <td>{{hist.id}}</td>
+    <td>{{hist.senders_name}}</td>
+    <td>{{hist.receivers_name}}</td>
+    <th>{{hist.amount}}</th>
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>
