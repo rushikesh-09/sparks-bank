@@ -83,6 +83,7 @@ DATABASES = {
         'NAME': 'bank',
         'USER': 'root',
         'PASSWORD': '18211989sqL',
+        'HOST':'localhost',
     }
 }
 
