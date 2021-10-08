@@ -80,9 +80,9 @@ WSGI_APPLICATION = 'banking.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'bd8o2bocs0vhcvr',
+        'NAME': 'd8o2bocs0vhcvr',
         'USER': 'fngygzotxkiupf',
-        'PASSWORD': '18211989sqL',
+        'PASSWORD': '3eb38c956b8559a5cb56682356f20a3b7400a5019cb0c7ddcb58a96b3c72c432',
         'HOST': 'ec2-52-7-228-45.compute-1.amazonaws.com',
         'PORT': '5432'
     }
