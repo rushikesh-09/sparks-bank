@@ -9,7 +9,8 @@ def index(request):
 
 def customers(request):
     datas = Data.objects.all()
-    return render(request, 'customers.html', {'datas': datas})
+    datas1 = datas.order_by('id')
+    return render(request, 'customers.html', {'datas': datas1})
 
 def payments(request):
     
