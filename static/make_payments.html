@@ -56,33 +56,35 @@
             {% csrf_token %}
             <label for="sender">Sender's Name:</label><br>
             <input type="text" list="sender" name="sender" required><br>
-            <datalist id="sender">
-                <option value="Ketan">
-                <option value="Rohan">
-                <option value="Jaydip">
-                <option value="Bhushan">
-                <option value="Aman">
-                <option value="Satwik">
-                <option value="Keshav">
-                <option value="Mayur">
-                <option value="Vaibhav">
-                <option value="Rupam">
-            </datalist>
+            <select id="sender" name="sender">
+                <option value="Ketan">Ketan</option>
+                <option value="Rohan">Rohan</option>
+                <option value="Jaydip">Jaydip</option>
+                <option value="Bhushan">Bhushan</option>
+                <option value="Aman">Aman</option>
+                <option value="Satwik">Satwik</option>
+                <option value="Keshav">Keshav</option>
+                <option value="Mayur">Mayur</option>
+                <option value="Vaibhav">Vaibhav</option>
+                <option value="Rupam">Rupam</option>
+            </select>
+            <br>
             <br>
             <label for="receiver">Receiver's Name:</label><br>
-            <input type="text" list="receiver" name="receiver" required><br>
-            <datalist id="receiver">
-                <option value="Ketan">
-                <option value="Rohan">
-                <option value="Jaydip">
-                <option value="Bhushan">
-                <option value="Aman">
-                <option value="Satwik">
-                <option value="Keshav">
-                <option value="Mayur">
-                <option value="Vaibhav">
-                <option value="Rupam">
-            </datalist>
+<!--            <input type="text" list="receiver" name="receiver" required><br>-->
+            <select id="receiver">
+                <option value="Ketan">Ketan</option>
+                <option value="Rohan">Rohan</option>
+                <option value="Jaydip">Jaydip</option>
+                <option value="Bhushan">Bhushan</option>
+                <option value="Aman">Aman</option>
+                <option value="Satwik">Satwik</option>
+                <option value="Keshav">Keshav</option>
+                <option value="Mayur">Mayur</option>
+                <option value="Vaibhav">Vaibhav</option>
+                <option value="Rupam">Rupam</option>
+            </select>
+            <br>
             <br>
             <label for="amount">Amount:</label><br>
             <input type="number" id="amount" name="amount" required><br><br>
